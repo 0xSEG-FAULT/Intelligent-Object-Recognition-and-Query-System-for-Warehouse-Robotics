@@ -2,6 +2,9 @@
 data/coco_subset/
 data/mapped_coco/
 models/
+results/
+scripts/check_mapping.py
+scripts/check_mapping_counts.py
 # Optionally ignore large model checkpoints (uncomment if needed)
 # models/checkpoints/
 # models/warehouse_resnet_final/

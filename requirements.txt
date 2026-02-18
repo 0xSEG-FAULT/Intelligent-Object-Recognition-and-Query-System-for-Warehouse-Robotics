@@ -13,3 +13,6 @@ faiss-cpu
 sentence-transformers
 fiftyone
 datasets
+scikit-learn
+ matplotlib
+  seaborn
