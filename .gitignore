@@ -1,0 +1,7 @@
+# Ignore large data files
+data/coco_subset/
+data/mapped_coco/
+models/
+# Optionally ignore large model checkpoints (uncomment if needed)
+# models/checkpoints/
+# models/warehouse_resnet_final/

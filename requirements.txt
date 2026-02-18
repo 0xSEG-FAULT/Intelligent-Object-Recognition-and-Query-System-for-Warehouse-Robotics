@@ -1,0 +1,14 @@
+torch
+torchvision
+transformers
+accelerate
+opencv-python
+pillow
+numpy
+langchain
+langchain-community
+langchain-huggingface
+faiss-cpu
+sentence-transformers
+fiftyone
+datasets

@@ -1,0 +1,11 @@
+[Protocol: Handling Fragile Items]
+Fragile items like bottles and glass must be handled with care.
+Use the soft-grip effector. Max acceleration: 0.5 m/s.
+
+[Protocol: Heavy Lifting]
+Heavy items like suitcases require the hydraulic lift.
+Ensure the path is clear. Do not lift over heads.
+
+[Protocol: Hazardous Materials]
+Hazardous items like electronics or sharp objects trigger a red warning.
+Do not tilt more than 15 degrees.
