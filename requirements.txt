@@ -1,18 +1,32 @@
-torch
-torchvision
-transformers
-accelerate
-opencv-python
-pillow
-numpy
-scipy
-langchain
-langchain-community
-langchain-huggingface
-faiss-cpu
-sentence-transformers
-fiftyone
-datasets
-scikit-learn
- matplotlib
-  seaborn
+# Core ML
+torch>=2.2.0
+torchvision>=0.17.0
+torchaudio>=2.2.0
+
+# Transformers & datasets
+transformers>=4.42.0
+datasets>=2.19.0
+accelerate>=0.30.0
+safetensors>=0.4.0
+
+# Vision
+opencv-python>=4.10.0
+pillow>=10.0.0
+
+# Data science
+numpy>=1.26.0
+pandas>=2.2.0
+scikit-learn>=1.4.0
+matplotlib>=3.8.0
+
+# RAG / LangChain
+langchain>=0.2.7
+langchain-community>=0.2.7
+langchain-core>=0.2.40
+langchain-huggingface>=0.0.3
+langchain-text-splitters>=0.2.4
+sentence-transformers>=3.0.0
+faiss-cpu>=1.8.0
+
+# Dataset tools
+fiftyone>=0.24.0
