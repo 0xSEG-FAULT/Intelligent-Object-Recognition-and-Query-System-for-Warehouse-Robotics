@@ -57,7 +57,7 @@ def main():
                 current_object_label = label
                 
                 # Debug: Print label for troubleshooting
-                print(f"[DEBUG] Raw label: '{label}' | Type: {type(label)}")
+                #print(f"[DEBUG] Raw label: '{label}' | Type: {type(label)}")
                 
                 # Define color for each category (B, G, R format)
                 color_map = {
@@ -69,7 +69,7 @@ def main():
                 # Get color based on label, default to gray if unknown
                 color = color_map.get(label, (128, 128, 128))
                 
-                print(f"[DEBUG] Label matched: {label} → Color: {color}")
+                #print(f"[DEBUG] Label matched: {label} → Color: {color}")
                 
                 # Draw semi-transparent filled rectangle for better visibility
                 overlay = frame.copy()

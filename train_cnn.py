@@ -10,8 +10,8 @@ from transformers import (
     Trainer
 )
 from torchvision.transforms import Compose, Normalize, ToTensor, Resize
-import fiftyone as fo
-import fiftyone.zoo as foz
+# fiftyone is imported conditionally inside prepare_data() to avoid version conflicts
+# (mongoengine/pymongo incompatibility) if data already exists
 
 # MAPPING CONFIGURATION
 # We map specific COCO classes to your 3 target categories
@@ -28,16 +28,26 @@ def prepare_data():
         print("Data directory exists. Skipping download.")
         return
 
+    # Import fiftyone only if needed (to avoid version conflicts with mongoengine/pymongo)
+    try:
+        import fiftyone as fo
+        import fiftyone.zoo as foz
+    except ImportError as e:
+        print(f"Error: FiftyOne is required to download COCO data but failed to import: {e}")
+        print("Data directory not found, and FiftyOne could not be loaded.")
+        print("Please ensure your data is in data/mapped_coco/train and data/mapped_coco/test")
+        raise
+
     print("Downloading COCO subset via FiftyOne...")
     all_classes = [c for sublist in CLASS_MAPPING.values() for c in sublist]
     
     # Download Validation set (smaller/faster for assignment)
     dataset = foz.load_zoo_dataset(
         "coco-2017",
-         split="train", # Use validation for a smaller subset, or train for the full set
+         split="validation", # Use validation for a smaller subset, or train for the full set
         label_types=["detections"],
         classes=all_classes,
-        # max_samples=600           # Uncomment to limit samples for faster testing during development
+        max_samples=600           # Uncomment to limit samples for faster testing during development
     )
 
     # Organize into folders
