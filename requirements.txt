@@ -5,6 +5,7 @@ accelerate
 opencv-python
 pillow
 numpy
+scipy
 langchain
 langchain-community
 langchain-huggingface
