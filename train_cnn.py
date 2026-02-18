@@ -34,10 +34,10 @@ def prepare_data():
     # Download Validation set (smaller/faster for assignment)
     dataset = foz.load_zoo_dataset(
         "coco-2017",
-        split="validation",
+         split="train", # Use validation for a smaller subset, or train for the full set
         label_types=["detections"],
         classes=all_classes,
-        max_samples=600
+        # max_samples=600           # Uncomment to limit samples for faster testing during development
     )
 
     # Organize into folders
